@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<label >Number of Clicks: </label>
+<p id="clicks">0</p>
+<input id="clearBtn" type="button" value="Clear">
+<br/>
+<img id="catpic" src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" alt="">
+
+</body>
+<script type="text/javascript" >
+var pic=document.getElementById("catpic");
+var clickText=document.getElementById("clicks");
+var clickNumber=0;
+
+var clearButton=document.getElementsByTagName("input");
+
+pic.addEventListener("click", function () {
+	clickNumber++;
+	clickText.innerHTML = clickNumber;
+}, false)
+
+clearButton.addEventListener("click", function () {
+	clickNumber=0;
+	clickText.innerHTML = 0;
+}, false);
+</script>
+</html>
